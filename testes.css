@@ -1,0 +1,168 @@
+*{
+  background-color: rgb(8, 11, 26);
+}
+
+.carousel-container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Ajusta para preencher a largura disponível */
+  max-height: 100%; /* Ajusta para preencher a altura disponível */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+
+
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border: none;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+.slide.previous {
+  opacity: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+}
+
+.slide.next {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: -1;
+}
+
+
+
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta para preencher a área da imagem */
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 10px;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: none;
+  border:none;
+}
+
+h3{
+  background-color: transparent;
+}
+
+p{
+  background-color: transparent;
+}
+
+.slide:nth-child(1) .carousel-caption {
+  left: 500px;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.catalog-button {
+  background-color: transparent;
+  border: 2px solid #0038FF;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+
+.catalog-button:hover {
+  background-color: #0038FF;
+  color: #fff;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.carousel-controls .prev,
+.carousel-controls .next {
+  color: #fff;
+  font-size: 30px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease-in-out; /* Adicionamos uma transição de cor para suavizar a mudança */
+}
+
+.carousel-controls .prev:hover,
+.carousel-controls .next:hover {
+  color: #6b6a6a; /* Mudamos a cor ao passar o mouse para uma cor de destaque */
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:#CBCACA; /* Cor de preenchimento das bolinhas */
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Adiciona uma transição suave para a animação */
+}
+
+.carousel-dot.active {
+  background-color: rgba(255, 255, 255, 0.461); /* Cor de preenchimento da bolinha ativa */
+  transform: scale(1.2); /* Adiciona uma animação de escala para a bolinha ativa */
+}
+

@@ -1,0 +1,294 @@
+body{ 
+    margin: 0 auto; 
+    background-color: #0f0f0f;
+}
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.barra{
+    height: 80px;
+    color: rgb(228, 228, 228);
+    background-color: #686868;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+/* .inicio{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.perfil{
+    margin-right: 10px;
+}
+
+.barrad{
+    border-right: 6px;
+    height: 60px;
+    color: rgb(228, 228, 228);
+    background-color: #686868;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.barradl{
+    border-right: 6px;
+    height: 60px;
+    color: rgb(228, 228, 228);
+    background-color: #686868;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-left: 25px;
+    margin-right: 180px;
+}
+
+.linha{
+    height: 35px;
+    border: #CBCACA solid 1px;
+}
+
+.icone{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.item{ /*Fonte*/
+    color: #CBCACA;
+    font-size: 25px;
+    font-family: helvetica;
+    font-weight: bold;
+    border-right: #686868 solid 40px;
+    cursor: pointer;
+}
+
+/* .pag{
+    margin-top: 40px;
+    display: flex;
+    color: white; 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+} 
+
+.form{
+    color: #d6d3d3;
+    font-size: 30px;
+    font-family: helvetica;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+} 
+
+.botão{
+    color: white;
+    border: #0400ff solid 3.5px;
+    background-color: #0400ff00;
+    font-weight: bold;
+    height: 65px;
+    width: 330px;
+    font-size: larger;
+    cursor: pointer;
+    font-size: 60%;
+}
+
+.botão:hover{
+    background-color: #0400ff;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap;');
+
+/* Manipulando cores, com variante */
+:root {
+    --color-neutral-0: #a4a4a4;
+    --color-neutral-10: #757575;
+    --color-neutral-30: #adadad;
+    --color-neutral-40: #f5f5f5;
+}
+
+/* Zerando configuração do projeto */
+* {
+    font-family: sans-serif; /* Definindo a fonte de todo o projeto*/
+    margin: 0; /* Zerando a margem */
+    padding: 0; /* Zerando espaçamentp */
+    box-sizing: border-box; /* Não calcular dimensão de um elemento (não somar bordas e margens com altura e largura) */
+    letter-spacing: 1.3px; /* Espaçamento entre as letras */
+}
+
+main{
+    height: 700px;
+}
+
+footer{
+    width: 100%; /* A largura do rodapé */
+    color: var(--color-neutral-40); /* Cor do texto */
+}
+
+/* Tirar o sublinhado das imagens */
+.footer-link{
+    text-decoration: none;
+}
+
+#footer_content{
+    background-color: #686868; /* Mudando toda a cor de fundo do rodapé */
+    display: grid; /* Distribuir os itens em coluna */
+    justify-content: flex-start;
+    grid-template-columns: repeat(4, 1fr); /* Falando que a divisão vai ser em 4 colunas */
+    padding: 3rem 3.5rem; /* Espaçamento o rem é uma unidade escalável e relativa, ele varia de acordo com a dimensão root do seu navegador (por padrão essa unidade é 16px), na maior parte das vezes lrem é igual a 16px */
+}
+
+/* Primeira coluna título */
+#footer_contacts h1{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.icone{
+    display: flex;
+    justify-content:center;
+    justify-self: center;
+    align-items:center;
+    /* margin-top: 20px; */
+}
+
+/* Primeira coluna icones */
+#footer_social_media{
+    display: flex; /* Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */
+    gap: 1.5rem; /* Espaçamento */
+    margin-top: 1.5rem; /* Margem em cima */
+    justify-content:center;
+    justify-self: center;
+    align-items:center;
+    
+}
+
+#footer_social_media .footer-link{
+    display: flex; /* Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */
+    align-items: center; /* Alinhando itens no fundo */
+    justify-content: center; /* Alinhando itens no fundo */
+    height: 2.5rem; /* Definir altura */
+    width: 2.5rem; /* Definir largura */
+    color: var(--color-neutral-40); /* Mudando a cor dos icones para branco */
+    border-radius: 50%;  /* Deixando a borda do fundo redonda */
+    transition: all 0.4s; /* Transição de opacidade */
+}
+
+#footer_social_media .footer-link1{
+    font-size: 1.25rem; /* Alterar o tamanho dos itens */
+}
+
+#footer_social_media .footer-link:hover{
+    opacity: 0.8; /* Diminuir a opacidade */
+}
+
+/* Configurando cor de fundo instagram */
+#instagram{
+    background: linear-gradient(#8946cc, #ff007b, #ff9500);
+}
+
+/* Configurando cor de fundo do facebook */
+#facebook{
+    background-color: #1137bd;
+}
+
+/* Configurando cor de fundo do whatsapp */
+#whatsapp{
+    background-color: #00d34d;
+}
+
+/* Lista */
+.footer-list{
+    display: flex; /* Deixa a lista em formato de linha */
+    flex-direction: column;  /* Deixa o texto em coluna */
+    gap: 0.75rem; /* Aumentar o espaçamento, definir espaço entre linhas e colunas */
+    list-style: none; /* Tirar bolinha da lista */
+}
+
+.footer-list .footer-link{
+    color: var(--color-neutral-30); /* Mudar a cor da lista */
+    transition: all 0.4s; /* Transição do hover */
+}
+
+.footer-list .footer-link:hover{
+    color: #1137bd; /* Hover da lista */
+}
+
+#footer_subscribe{
+    display: flex; /* Deixa a lista em formato de linha */
+    flex-direction: column; /* Deixa o texto em coluna */
+    gap: 1.5rem; /* Aumentar o espaçamento, definir espaço entre linhas e colunas */
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30); /* Mudar cor do parágrafo da última coluna */
+}
+
+/* Configurar label */
+
+#input_group{
+    display: flex; 
+    /* Deixa toda label e a imagem em linha */
+    align-items: center;
+    /* Centralizar icones */
+    background-color: var(--color-neutral-0);
+    /* Mudando a cor */
+    border-radius: 4px;
+    /* Mexendo no canto da borda da label */
+}
+
+#input_group input{
+    all: unset;
+    /* Tirar toda configuração padrão */
+    padding: 0.75rem;
+    /* Aumentando o tamanho da label */
+    width: 100%;
+    /* Largura 100% dentro da lista */
+}
+
+/* Botão da label */
+#input_group button{
+    background-color: #1137bd; /* Mudar o fundo do botão */
+    border: none; /* Tirar borda */
+    color: var(--color-neutral-40); /* Cor do incone */
+    padding: 0px 1.25rem; /* Aumentar o tamanho do botão */
+    font-size: 1.125rem; /* Aumentar a font do icone */
+    height: 100%; /* Aumentando a altura de 100% */
+    border-radius: 0px 4px 4px 0px;  /* Arredondando ao botão */
+    cursor: pointer; /* Mudar o cursor quando o mouse passa por cima */
+    transition: all 0.4s; /* Tempo dea transição */
+}
+
+/* Hover do botão */
+#input_group button:hover{
+    opacity: 0.8; /* Opacidade do botão */
+}
+
+/* Parte do copyright */
+#footer_copyright{
+    display: flex; /* Deixa toda label e a imagem em linha */
+    justify-content: center; /* Centralizando o texto */
+    background-color: var(--color-neutral-0); /* Mudando a cor do fundo */
+    font-size: 0.9rem; /* Diminuindo o tamanho da letra */
+    padding: 1.5rem; /* Aumenbtando o tamanho do fundo */
+    font-weight: 100; /* Mudando a geossura so texto */
+}
